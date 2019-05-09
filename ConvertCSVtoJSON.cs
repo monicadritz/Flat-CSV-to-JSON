@@ -108,8 +108,9 @@ namespace CsvToJson
             foreach(var line in lines)
             {
                 //parses the line by the "," value in order to account for a comma inside a value
-                // split overloader found here:https://stackoverflow.com/questions/2245442/split-a-string-by-another-string-in-c-sharp
+                //split overloader found here:https://stackoverflow.com/questions/2245442/split-a-string-by-another-string-in-c-sharp
                 string[] splitLine = line.Split(new string[] { "\",\"" }, StringSplitOptions.None);
+                // The following two lines get rid of the starting and ending quote Leftover from splitting
                 splitLine[0] = splitLine[0].Replace("\"", string.Empty);
                 splitLine[splitLine.Length-1] = splitLine[splitLine.Length-1].Replace("\"", string.Empty);
                 csv.Add(splitLine);
