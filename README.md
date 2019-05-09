@@ -4,3 +4,10 @@ Converts a variable width, flat CSV file to a hierarchical JSON file.
   * Each F record can contain multiple Order records, designated "O".
   * Each O record contains a single "B" & "T" records
   * Each O record can contain multiple Line Item records, designated "L"
+
+## Accompanying Notes 
+ There were a couple of assumptions made about the structure of the data given in other potential CSV files. 
+  * Each record type would have the same number of fields 
+  * The fields in each record would be in the same order
+  * All fields must be quoted
+  
