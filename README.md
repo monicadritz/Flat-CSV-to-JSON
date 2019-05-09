@@ -7,6 +7,7 @@ Converts a variable width, flat CSV file to a hierarchical JSON file.
 
 ## Accompanying Notes 
  There were a couple of assumptions made about the structure of the data given in other potential CSV files. 
+  * The input file will be named test.csv and in the current directory
   * Each record type would have the same number of fields 
   * The fields in each record would be in the same order
   * All fields must be quoted
